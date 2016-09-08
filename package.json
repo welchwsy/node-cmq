@@ -1,0 +1,23 @@
+{
+  "name": "node-cmq",
+  "version": "0.0.1",
+  "description": "this is a tengXunYun cmq nodejs client",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://welchwsy@github.com/welchwsy/node-cmq.git"
+  },
+  "keywords": [
+    "node",
+    "cmq"
+  ],
+  "author": "welch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/welchwsy/node-cmq/issues"
+  },
+  "homepage": "https://github.com/welchwsy/node-cmq#readme"
+}
