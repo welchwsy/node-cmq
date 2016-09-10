@@ -1,5 +1,5 @@
 # node-cmq
-腾讯云消息队列的nodejs JDK
+腾讯云消息队列的nodejs SDK
 
 API文档 [https://www.qcloud.com/doc/api/431/5832](https://www.qcloud.com/doc/api/431/5832)
 
