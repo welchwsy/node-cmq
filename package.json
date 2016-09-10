@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/welchwsy/node-cmq/issues"
   },
-  "homepage": "https://github.com/welchwsy/node-cmq#readme"
+  "homepage": "https://github.com/welchwsy/node-cmq#readme",
+  "devDependencies": {
+    "ava": "^0.16.0"
+  },
+  "dependencies": {
+    "moment": "^2.14.1",
+    "request": "^2.74.0"
+  }
 }
