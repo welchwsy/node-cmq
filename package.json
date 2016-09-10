@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "moment": "^2.14.1",
+    "qcloudapi-sdk": "^0.1.4",
     "request": "^2.74.0"
   }
 }
