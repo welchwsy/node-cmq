@@ -29,3 +29,40 @@ cmq.CreateQueue('yourQueueName', (err,data) => {
   console.log('CreateQueue', err, data)
 })
 ```
+
+## how to notifyMessage?
+```javascript
+var _signStop = false
+var notifyStop = function () {
+  _signStop = true
+}
+var notifyRecv = function (queueName, done) {
+  cmq.ReceiveMessage(queueName, 5, function (err, data) {
+    if (_signStop) {
+      console.log('notifyRecv is stop!')
+      _signStop = false
+      return
+    }
+    if (err) {
+      console.log('notifyRecv-error', err)
+    } else if (data.code === 0) {
+      console.log('a message', data)
+      if (done) {
+        cmq.DeleteMessage(queueName, data.receiptHandle, (err, data) => {
+          console.log('DeleteMessage', err, data)
+        })
+      }
+      notifyRecv(queueName, done)
+    } else {
+      console.log('no message', data)
+      notifyRecv(queueName, done)
+    }
+  })
+}
+
+notifyRecv('test779361906', true)
+
+setTimeout(function () {
+  notifyStop()
+}, 10000)
+```
